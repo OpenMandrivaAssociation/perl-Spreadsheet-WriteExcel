@@ -16,7 +16,6 @@ BuildRequires:	perl-devel
 %endif
 Requires:	perl-Parse-RecDescent
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This package contains the Spreadsheet::WriteExcel perl5 module which
