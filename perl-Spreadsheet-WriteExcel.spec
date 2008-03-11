@@ -15,6 +15,7 @@ Source:		http://www.cpan.org/modules/by-module/Spreadsheet/%{module}-%{version}.
 BuildRequires:	perl-devel
 %endif
 Requires:	perl-Parse-RecDescent
+BuildRequires:	perl-Parse-RecDescent
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
@@ -30,10 +31,6 @@ Gnumeric.
 %prep
 %setup -q -n %{module}-%{version}
 
-# fix encoding
-for file in `find . -type f`; do
-    perl -pi -e 'tr/\r//d;' $file
-done
 # fix perms
 chmod 755 examples/*.pl charts/*.pl
 
