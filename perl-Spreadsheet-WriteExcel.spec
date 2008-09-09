@@ -16,6 +16,7 @@ BuildRequires:	perl-devel
 %endif
 Requires:	perl-Parse-RecDescent
 BuildRequires:	perl-Parse-RecDescent
+BuildRequires:	perl-OLE-Storage_Lite
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
