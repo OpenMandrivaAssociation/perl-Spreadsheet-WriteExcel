@@ -1,6 +1,6 @@
 %define module	Spreadsheet-WriteExcel
 %define name	perl-%{module}
-%define version	2.23
+%define version	2.25
 %define release	%mkrel 1
 
 Name:		%{name}
