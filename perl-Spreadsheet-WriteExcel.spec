@@ -1,24 +1,24 @@
-%define module	Spreadsheet-WriteExcel
-%define name	perl-%{module}
-%define version	2.25
-%define release	%mkrel 1
+%define upstream_name	 Spreadsheet-WriteExcel
+%define upstream_version 2.25
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Write cross-platform Excel binary file
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source:		http://www.cpan.org/modules/by-module/Spreadsheet/%{module}-%{version}.tar.bz2
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Spreadsheet/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
-Requires:	perl-Parse-RecDescent
 BuildRequires:	perl-Parse-RecDescent
 BuildRequires:	perl-OLE-Storage_Lite
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
+Requires:	perl-Parse-RecDescent
 
 %description
 This package contains the Spreadsheet::WriteExcel perl5 module which
@@ -30,7 +30,7 @@ Those spreadsheets will be compatible with Excel 5, 95, 97, 2000,
 Gnumeric.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 # fix perms
 chmod 755 examples/*.pl charts/*.pl
@@ -60,4 +60,3 @@ rm -rf %{buildroot}
 %{_bindir}/chartex
 %{perl_vendorlib}/Spreadsheet
 %{_mandir}/*/*
-
