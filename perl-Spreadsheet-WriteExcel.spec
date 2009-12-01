@@ -1,5 +1,5 @@
 %define upstream_name	 Spreadsheet-WriteExcel
-%define upstream_version 2.29
+%define upstream_version 2.30
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -40,7 +40,7 @@ chmod 755 examples/*.pl charts/*.pl
 %make
 
 %check
-%{__make} test
+%make test
 
 %install
 rm -rf %{buildroot}
@@ -56,7 +56,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc README Changes doc examples charts
+%doc README Changes examples charts
 %{_bindir}/chartex
 %{perl_vendorlib}/Spreadsheet
 %{_mandir}/*/*
