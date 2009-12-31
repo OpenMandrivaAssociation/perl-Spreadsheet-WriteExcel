@@ -1,5 +1,5 @@
 %define upstream_name	 Spreadsheet-WriteExcel
-%define upstream_version 2.31
+%define upstream_version 2.32
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
