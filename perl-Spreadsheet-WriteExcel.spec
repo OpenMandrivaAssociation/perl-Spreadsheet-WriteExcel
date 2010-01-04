@@ -1,5 +1,5 @@
 %define upstream_name	 Spreadsheet-WriteExcel
-%define upstream_version 2.32
+%define upstream_version 2.33
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -33,7 +33,7 @@ Gnumeric.
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 # fix perms
-chmod 755 examples/*.pl charts/*.pl
+chmod 755 examples/*.pl external_charts/*.pl
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor 
@@ -56,7 +56,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc README Changes examples charts
+%doc README Changes examples external_charts
 %{_bindir}/chartex
 %{perl_vendorlib}/Spreadsheet
 %{_mandir}/*/*
