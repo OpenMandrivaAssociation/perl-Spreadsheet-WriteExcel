@@ -1,5 +1,5 @@
 %define modname	Spreadsheet-WriteExcel
-%define modver	2.37
+%define modver 2.39
 
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'perl\\(Win32(.*)\\)'
@@ -8,11 +8,11 @@
 Summary:	Write cross-platform Excel binary file
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	9
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Spreadsheet/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Spreadsheet/Spreadsheet-WriteExcel-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
 BuildRequires:	perl-Parse-RecDescent
@@ -55,4 +55,5 @@ rm -rf %{buildroot}%{perl_vendorlib}/Spreadsheet/WriteExcel/examples
 %{perl_vendorlib}/Spreadsheet
 %{_mandir}/man1/*
 %{_mandir}/man3/*
+
 
