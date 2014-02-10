@@ -1,4 +1,5 @@
 removed_sources:
   Spreadsheet-WriteExcel-2.37.tar.gz: 0004ff1635c3a29e5213d9f6e2ba0d2e77ed97ff
-sources:
   Spreadsheet-WriteExcel-2.39.tar.gz: 2f68050eba196875cd0e5e3e266eb4d425fc39c8
+sources:
+  Spreadsheet-WriteExcel-2.40.tar.gz: 8dd613cd08326aea374b2e0457921c1243a43e0d
