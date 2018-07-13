@@ -14,6 +14,7 @@ Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Spreadsheet/Spreadsheet-WriteExcel-%{modver}.tar.gz
 BuildArch:	noarch
+BuildRequires:	perl(Test::More)
 BuildRequires:	perl-devel
 BuildRequires:	perl-Parse-RecDescent
 BuildRequires:	perl-OLE-Storage_Lite
